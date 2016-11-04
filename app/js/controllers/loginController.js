@@ -18,11 +18,13 @@ angular.module('MetronicApp').controller('loginController', function($rootScope,
     })
     $scope.login = function(){
     	if($scope.userName == "admin" && $scope.password == "admin"){
-    		$state.go('adminDashboard');
     		$(".page-sidebar-wrapper").show();
     		$(".page-header").show();
     		$(".quick-nav").show();
     		$(".page-toolbar").show();
+    		$(".loginArea").hide();
+    		$(".page-container").show();
+    		$state.go('adminDashboard');
     	}
     	if($scope.userName == "user" && $scope.password == "user"){
     		$state.go('userDashboard');
@@ -30,6 +32,9 @@ angular.module('MetronicApp').controller('loginController', function($rootScope,
     		$(".page-header").show();
     		$(".quick-nav").show();
     		$(".page-toolbar").show();
+    		$(".loginArea").hide();
+    		$(".page-container").show();
     	}
+    	//$rootScope.loginPage = "not";
     }
 });

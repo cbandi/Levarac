@@ -3,7 +3,7 @@ angular.module('MetronicApp').controller('DashboardController', function($rootSc
         // initialize core components
         App.initAjax();
     });
-
+    $rootScope.loginPage = "dashboard";
     // set sidebar closed and body solid layout mode
     $rootScope.settings.layout.pageContentWhite = true;
     $rootScope.settings.layout.pageBodySolid = false;
