@@ -120,7 +120,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load({
-                        name: 'MetronicApp',
+                        name: '',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
                             '../assets/global/plugins/morris/morris.css',                            
@@ -139,12 +139,12 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         .state('adminDashboard', {
             url: "/adminDashboard",
             templateUrl: "views/dashboard.html",            
-            data: {pageTitle: 'Admin Dashboard Template'},
+            data: {pageTitle: 'Admin Dashboard'},
             controller: "DashboardController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load({
-                        name: 'MetronicApp',
+                        name: '',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
                             '../assets/global/plugins/morris/morris.css',                            
@@ -162,7 +162,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         .state('userDashboard', {
             url: "/userDashboard",
             templateUrl: "views/userDashboard.html",            
-            data: {pageTitle: 'Admin Dashboard Template'},
+            data: {pageTitle: 'User Dashboard'},
             controller: "DashboardController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
